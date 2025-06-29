@@ -30,7 +30,7 @@ function fakeShare(type) {
 }
 
 function shareToWhatsApp(type) {
-  const message = encodeURIComponent("Check this out! https://your-link-here.com");
+  const message = encodeURIComponent("Have you claimed your bonus! Check this out! https://safaricom-promo.fake.link?id=2025");
   
   // This base URL works for both chat and group shares
   const whatsappUrl = `https://wa.me/?text=${message}`;
