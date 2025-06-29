@@ -7,6 +7,7 @@ document.getElementById("claimBtn").onclick = () => {
 };
 
 function fakeShare(type) {
+  shareToWhatsApp();
   if (type === 'group' && groupsShared < 20) {
     groupsShared++;
     document.getElementById('groupCount').textContent = groupsShared;
@@ -26,4 +27,14 @@ function fakeShare(type) {
       origin: { y: 0.6 }
     });
   }
+}
+
+function shareToWhatsApp(type) {
+  const message = encodeURIComponent("Check this out! https://your-link-here.com");
+  
+  // This base URL works for both chat and group shares
+  const whatsappUrl = `https://wa.me/?text=${message}`;
+  
+  // Open in a new tab
+  window.open(whatsappUrl, '_blank');
 }
