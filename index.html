@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Safaricom Bonus Promotion</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Congratulations!</h1>
+    <p>You have been selected to receive <strong>KSh 20,000</strong> from the official Safaricom promotion.</p>
+    <button id="claimBtn">Claim Bonus</button>
+
+    <div id="shareSection" class="hidden">
+      <p><strong>To activate your bonus, please share this link:</strong></p>
+      <input type="text" value="https://safaricom-promo.fake.link?id=2025" readonly onclick="this.select()" />
+      <p>You must share to:</p>
+      <ul>
+        <li>👥 WhatsApp Groups: <span id="groupCount">0</span> / 20</li>
+        <li>🧑 Individual Chats: <span id="chatCount">0</span> / 5</li>
+      </ul>
+      <button onclick="fakeShare('group')">Share to Group</button>
+      <button onclick="fakeShare('chat')">Share to Chat</button>
+    </div>
+
+    <div id="successMessage" class="hidden">
+      ✅ Thank you! Your bonus has been successfully claimed.<br/>
+      You will receive an SMS confirmation from Safaricom within 24 hours.
+    </div>
+
+    <div id="commentSection">
+      <h3>📣 Recent Comments</h3>
+      <div class="comment"><strong>Mary W.</strong> – I just received my bonus! Thank you Safaricom 🎉</div>
+      <div class="comment"><strong>James K.</strong> – It worked! Shared to 25 groups and I got it.</div>
+      <div class="comment"><strong>Asha M.</strong> – I thought it was fake but it's real guys 😍</div>
+      <div class="comment"><strong>Brian N.</strong> – Make sure you follow all steps. Mine came in 10 mins!</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
