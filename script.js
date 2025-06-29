@@ -30,11 +30,12 @@ function fakeShare(type) {
 }
 
 function shareToWhatsApp(type) {
-  const message = encodeURIComponent("2025 2025 Safaricom is here. Have you just claimed your bonus from safaricom to get bounty amount of money! Check this out! https://safaricom-promo.fake.link?id=2025");
-  
-  // This base URL works for both chat and group shares
-  const whatsappUrl = `https://wa.me/?text=${message}`;
-  
-  // Open in a new tab
+  const baseMessage = "2025 Safaricom is here. Have you just claimed your bonus from Safaricom?";
+  const bonusUrl = "https://safaricom-promo.fake.link?id=2025";
+  const fullMessage = `${baseMessage} Check this out! ${bonusUrl}`;
+
+  const encodedMessage = encodeURIComponent(fullMessage);
+  const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+
   window.open(whatsappUrl, '_blank');
 }
